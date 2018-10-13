@@ -128,21 +128,13 @@ io.on('connection', function(socket) {
         onlineCount: 0
       },
       {
-        id: 'ketns',
-        name: 'KETNS',
-        preview: 'Educate Together Knocknacarra NS',
-        image: '/images/Knocknacarra-Educate-Together-National-School-Logo-irish.png',
+        id: 'knocknacarra',
+        name: 'Knocknacarra',
+        preview: 'General Knocknacarra Discussion',
+        image: '/images/Knocknacarra-round.png',
         status: 'none',
         onlineCount: 0
       },
-      {
-        id: 'knockfc',
-        name: 'Kocknacarra FC',
-        preview: 'Our Soccer Club',
-        image: '/images/KnocknacarraFC.png',
-        status: 'none',
-        onlineCount: 0
-      }
     ]);
   });
 
