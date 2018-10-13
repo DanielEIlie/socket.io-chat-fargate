@@ -120,26 +120,26 @@ io.on('connection', function(socket) {
         onlineCount: 0
       },
       {
-        id: 'fargate',
-        name: 'AWS Fargate',
-        preview: 'Containers without instances',
-        image: '/images/fargate.png',
+        id: 'woodplc',
+        name: 'Wood',
+        preview: 'Team AWESome - EV Developers',
+        image: '/images/Wood.png',
         status: 'none',
         onlineCount: 0
       },
       {
-        id: 'eks',
-        name: 'AWS EKS',
-        preview: 'AWS managed Kubernetes masters',
-        image: '/images/eks.png',
+        id: 'ketns',
+        name: 'KETNS',
+        preview: 'Educate Together Knocknacarra NS',
+        image: '/images/Knocknacarra-Educate-Together-National-School-Logo-irish.png',
         status: 'none',
         onlineCount: 0
       },
       {
-        id: 'ecs',
-        name: 'AWS ECS',
-        preview: 'AWS container orchestrator',
-        image: '/images/ecs.png',
+        id: 'knockfc',
+        name: 'Kocknacarra FC',
+        preview: 'Our Soccer Club',
+        image: '/images/KnocknacarraFC.png',
         status: 'none',
         onlineCount: 0
       }
