@@ -280,39 +280,6 @@ io.on('connection', function(socket) {
     });
   });
 
-  socket.on('anonymous user', function(callback) {
-    if (!_.isFunction(callback)) {
-      return;
-    }
-
-    socket.authenticated = true;
-    socket.username = 'anonymous_' + crypto.randomBytes(3).toString('hex');
-    socket.avatar = 'https://www.gravatar.com/avatar/' + crypto.createHash('md5').update(socket.username).digest('hex') + '?d=retro';
-
-    // Set the user as present.
-    Presence.upsert(socket.id, {
-      username: socket.username
-    });
-    socket.present = true;
-
-    Presence.list(function(users) {
-      socket.emit('login', {
-        numUsers: users.length
-      });
-
-      // echo globally (all clients) that a person has connected
-      io.emit('user joined', {
-        username: socket.username,
-        avatar: socket.avatar,
-        numUsers: users.length
-      });
-    });
-
-    return callback(null, {
-      username: socket.username,
-      avatar: socket.avatar
-    });
-  });
 
   // when the client emits 'typing', we broadcast it to others
   socket.on('typing', function(room) {

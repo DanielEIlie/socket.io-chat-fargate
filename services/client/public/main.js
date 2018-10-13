@@ -430,7 +430,7 @@ Vue.component('login', {
   template: `<div class='message-input-form'>
     <div class="wrap">
       <form name="form" v-on:submit.prevent="submit">
-        Login, <a href='#' v-on:click='createAccount'>create an account</a>, or <a href='#' v-on:click='anonymous'>stay anonymous</a> to chat:
+        Login or, <a href='#' v-on:click='createAccount'>create an account</a> to chat:
         <br /> <br />
         <div class="input-group">
           <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -447,15 +447,6 @@ Vue.component('login', {
     </div>
   </div>`,
   methods: {
-    anonymous: function() {
-      socket.emit('anonymous user', function(err, response) {
-        store.data.state.username = response.username;
-        store.data.state.avatar = response.avatar;
-        store.data.state.authenticated = true;
-        store.data.state.belowMessagesView = 'message-input';
-        console.log('logged in');
-      });
-    },
 
     createAccount: function() {
       store.data.state.belowMessagesView = 'create-account';
@@ -504,7 +495,7 @@ Vue.component('create-account', {
   template: `<div class='message-input-form'>
     <div class="wrap">
       <form name="form" id="create-form" v-on:submit.prevent="submit">
-        <a href='#' v-on:click='login'>Login</a>, create an account, or <a href='#' v-on:click='anonymous'>stay anonymous</a> to chat:
+        <a href='#' v-on:click='login'>Login</a> or create an account to chat:
         <br />
         <br />
         <p v-if="error=='username'" class="text-danger">Username is already taken</p> <br />
@@ -538,15 +529,6 @@ Vue.component('create-account', {
     };
   },
   methods: {
-    anonymous: function() {
-      socket.emit('anonymous user', function(err, response) {
-        store.data.state.username = response.username;
-        store.data.state.avatar = response.avatar;
-        store.data.state.authenticated = true;
-        store.data.state.belowMessagesView = 'message-input';
-        console.log('logged in');
-      });
-    },
 
     login: function() {
       store.data.state.belowMessagesView = 'login';
