@@ -120,14 +120,6 @@ io.on('connection', function(socket) {
         onlineCount: 0
       },
       {
-        id: 'woodplc',
-        name: 'Wood',
-        preview: 'Team AWESome - EV Developers',
-        image: '/images/Wood.png',
-        status: 'none',
-        onlineCount: 0
-      },
-      {
         id: 'knocknacarra',
         name: 'Knocknacarra',
         preview: 'General Knocknacarra Discussion',

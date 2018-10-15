@@ -19,8 +19,7 @@ var store = {
 
     messages: {
       knocknacarra: [],
-      general: [],
-      woodplc: []
+      general: []
     },
 
     typing: [],
