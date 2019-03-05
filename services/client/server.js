@@ -119,6 +119,14 @@ io.on('connection', function(socket) {
         status: 'none',
         onlineCount: 0
       },
+      //{
+      //  id: 'ULDevelopers',
+      //  name: 'UL Developers',
+      //  preview: 'UL Developers discussion',
+      //  image: '/images/UL_Logo_Portrait.png',
+      //  status: 'none',
+      //  onlineCount: 0
+      //},
       {
         id: 'knocknacarra',
         name: 'Knocknacarra',
@@ -126,7 +134,7 @@ io.on('connection', function(socket) {
         image: '/images/Knocknacarra-round.png',
         status: 'none',
         onlineCount: 0
-      },
+      }
     ]);
   });
 
