@@ -18,9 +18,9 @@ var store = {
     activeMessages: [],
 
     messages: {
-      knocknacarra: [],
-      //ULDevelopers: [],
-      general: []
+     //general: [],
+     //ULDevelopers: [],
+     knocknacarra: []
     },
 
     typing: [],

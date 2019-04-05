@@ -111,14 +111,14 @@ io.on('connection', function(socket) {
     }
 
     return callback(null, [
-      {
-        id: 'general',
-        name: 'General AWS',
-        preview: 'General AWS discussion',
-        image: '/images/aws.jpg',
-        status: 'none',
-        onlineCount: 0
-      },
+      //{
+      //  id: 'general',
+      //  name: 'General AWS',
+      //  preview: 'General AWS discussion',
+      //  image: '/images/aws.jpg',
+      //  status: 'none',
+      //  onlineCount: 0
+      //},
       //{
       //  id: 'ULDevelopers',
       //  name: 'UL Developers',
